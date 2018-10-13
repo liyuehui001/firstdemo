@@ -18,12 +18,11 @@ Route::get('/', function () {
 Route::post('/login','UserController@login');
 //注册
 Route::post('/register','UserController@register');
-
+//获取洲列表
 Route::get('/getStateList','GetListController@getStateList');
-
-
+//获取港口列表
 Route::post('/getOutPortList','GetListController@getPortList');
-
+//获取省份列表
 Route::post('/getPortByProvince','GetListController@getPortByProvince');
 
 Route::post('/upload','GetListController@uploadFile');

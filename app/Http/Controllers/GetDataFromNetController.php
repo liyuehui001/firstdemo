@@ -10,10 +10,8 @@ class GetDataFromNetController extends Controller
     //
     public function getDataFromNet(Request $request){
     	$portname = $request->portname;
-
         $port = PortNameIdConnModel::where('port_name',$portname)->first();
         $portid = $port['id'];
-
     	$date = $request->date;
     	$output = shell_exec('python3 /Users/black/Documents/laravel_file/firstdemo/app/getDataFromNet.py '.$portid.' '.$date);
     	// var_dump($_SERVER["DOCUMENT_ROOT"]);
